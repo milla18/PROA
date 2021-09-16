@@ -1,0 +1,147 @@
+
+<html>
+
+    <head>
+    
+        <script>
+
+
+          var valorsaldo = 100.0;
+     
+     
+          var nome = window.prompt ('Qual é o seu nome ?')
+          window.alert( 'É um grande prazer te conhecer,'+ nome + '!' )
+
+         function inicio() {
+
+            var escolha = parseInt(prompt('Selecione uma opção 1.) Saldo 2.) Extrato 3.) Saque 4.) Deposito 5.) Trasnferencia 6.)Sair'));
+
+        switch(escolha){
+            case 1:
+                saldo();
+                break;
+        
+            case 2:
+                extrato ();
+                break;
+
+      
+            case 3:
+                saque();
+                break;
+        
+            case 4:
+                deposito();
+                break;
+             case 5:
+                transferencia();
+                break;
+      
+            case 6:
+                sair();
+                break;
+        }
+    }
+
+
+        inicio();
+
+    function saldo (){
+        if(senha()){
+            alert('seu saldo é' + valorsaldo);
+          inicio();
+     }else{
+            senha()
+        }
+    
+        }
+
+        function extrato() {
+            if (senha());
+            let extrato = ['um', 100, 'dois', 200]
+            alert(extrato);
+            inicio();
+        }
+
+
+        function saque() {
+            if (senha());
+            let valor1 = parseFloat(prompt('qual o valor que deseja sacar? '));
+            if (isNaN(valor1) || valor1 === '') {
+                alert('Por favor, infome um numero: ');
+                sacar();
+            } else {
+                if (valorsaldo - valor1 <= 0) {
+                    operacao();
+                } else {
+                    valorsaldo -= valor1
+                    alert(`Voce sacou R$${valor1} e agora tem ${valorsaldo}`);
+                }
+            }
+            inicio();
+        }
+   
+
+           function deposito() {
+               if (senha());
+               let conta =  parseFloat(prompt(' informe o numero da sua conta ?  '));
+               let deposito1 = parseFloat(prompt('qual o valor que deseja depositar ? '));  
+               if (isNaN (deposito1) || deposito1 === '' || deposito1 <=0){
+                   alert ('Por favor ,  informe um numero :')
+                   deposito ();
+               } else{
+                  valorsaldo += deposito1
+                  alert (`voce depositou R$${deposito1}`)
+               }
+               inicio ();
+               }
+
+               function transferencia (){
+                   if (senha());
+                   let transferencia2 =   parseFloat(prompt(' qual o valor que deseja depositar ? '));
+                   if (isNaN (transferencia2) || transferencia2 === ''|| transferencia2 <=0){
+                       alert ('Por favor , informe o valor')
+
+                   } else{
+                       valorsaldo -= transferencia2
+                       alert(`voce transferiu R$${transferencia2}`)
+                   }
+                   inicio ();
+               }
+
+
+               function sair (){
+                   alert(`Prazer em te conhecer ${nome}`)
+                   
+                   window.close ();
+               }
+           
+        
+
+
+
+    function senha (){
+          senhausuario = Number(prompt('digite sua senha'));
+           if (senhausuario === 3589){
+               return  true;
+           }else{
+               return false;
+           }
+}
+      
+    function operacao(){
+        alert('operação não autorizada');
+        inicio();
+    }
+ 
+     inicio();
+            
+        </script>
+    
+    </head>
+    
+    <body>
+    
+    </body>
+    
+    </html>
