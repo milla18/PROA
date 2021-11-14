@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+     class elevador{
+         constructor (totalAndares,capacidadeElevador, quantidadePessoas,terreo) {
+             this.totalAndares= totalAndares
+             this.capacidadeElevador=capacidadeElevador
+             this.quantidadePessoas=quantidadePessoas
+             this.andar=andar
+           
+         }
+         sair(){
+             if(quantidadePessoas <= capacidadeElevador && quantidadePessoas >0){
+                quantidadePessoas -1  
+        
+             }else {
+                 return;
+             }
+             
+         }
+         entrar (){
+             if(quantidadePessoas < capacidadeElevador  ){
+                 quantidadePessoas ++
+             }
+         }
+         subir (){
+             if(andar >= 0 && andar < totalAndares ){
+                andar ++
+             }else{
+                 return;
+             }
+         }
+         descer(){
+             if(andar <= totalAndares ){
+                 andar--
+             }else{
+                 return;
+             }
+         }
+     }
+
+
+    </script>
+</body>
+</html>
