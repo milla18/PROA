@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+    <script type="text/javascript">
+
+  
+          
+
+
+
+       let valor1 = Number(prompt("Digite o primeiro valor: "))
+        let valor2 = Number(prompt("Digite o segundo valor: "))
+        let valor3 = Number(prompt("Digite o terceiro valor: "))
+        let soma = 0
+
+        if (valor1 > valor2 && valor1 > valor3) {
+            if (valor2 > valor3) {
+                soma = valor1 + valor2;
+                document.write('Os maiores valores são' );
+                Math.max([valor1[valor2]]) 
+                document.write('A soma é' +soma);
+            } else {
+                soma = (valor1 + valor3);
+                document.write(`Os maiores valores são: ${valor1} e ${valor3}`);
+                document.write(`A soma é: ${soma}`);
+            }
+        }
+
+            if (valor2 > valor1 && valor2 > valor3) {
+                if (valor1 > valor3) {
+                    soma = valor2 + valor1;
+                    document.write(`Os maiores valores são: ${valor2} e ${valor1}`);
+                    document.write(`A soma é: ${soma}`);
+                } else {
+                     soma = (valor1 + valor3);
+                    document.write(`Os maiores valores são: ${valor2} e ${valor3}`);
+                    document.write(`A soma é: ${soma}`);
+                }
+            }
+
+
+                if (valor3 > valor1 && valor3 > valor2) {
+                    if (valor2 > valor1) {
+                        soma = valor3 + valor2;
+                        document.write(`Os maiores valores são: ${valor3} e ${valor2}`);
+                    } else {
+                         soma = (valor3 + valor1);
+                        document.write(`Os maiores valores são: ${valor3} e ${valor1} a soma dá ${soma}`);
+                    }
+                }
+        
+    
+
+      
+  </script>
+
+
+
+</head>
+</html>
